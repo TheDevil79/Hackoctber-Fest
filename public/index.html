@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="PatchLens is a defensive, non-invasive security posture scanner for TLS, headers, exposed technologies, and known vulnerabilities."
+    />
+    <meta name="theme-color" content="#050505" />
+    <title>PatchLens — Security Posture Scanner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="PatchLens home">
+        <span class="brand-mark" aria-hidden="true">
+          <span></span>
+        </span>
+        <span>PATCHLENS</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#scanner">Scanner</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#process">How it works</a>
+        <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
+      </nav>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span></span><span></span>
+      </button>
+
+      <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+        <a href="#about">About</a>
+        <a href="#scanner">Scanner</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#process">How it works</a>
+        <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="top" data-hero>
+        <div class="star-field stars-near" aria-hidden="true"></div>
+        <div class="star-field stars-far" aria-hidden="true"></div>
+        <div class="star-field stars-dust" aria-hidden="true"></div>
+        <div class="orbit orbit-one" aria-hidden="true"></div>
+        <div class="orbit orbit-two" aria-hidden="true"></div>
+        <div class="planet-wrap" aria-hidden="true">
+          <div class="planet">
+            <div class="planet-texture"></div>
+            <div class="planet-crater crater-one"></div>
+            <div class="planet-crater crater-two"></div>
+            <div class="planet-crater crater-three"></div>
+          </div>
+        </div>
+
+        <div class="hero-content reveal">
+          <div class="eyebrow"><span></span> Passive security intelligence <span></span></div>
+          <h1>PATCHLENS</h1>
+          <p class="hero-subtitle">Security Posture Scanner</p>
+          <p class="hero-description">
+            Inspect TLS, security headers, exposed technologies and known vulnerabilities —
+            without intrusive testing.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#scanner">Run a scan</a>
+            <a class="button button-ghost" href="#about">Explore PatchLens</a>
+          </div>
+        </div>
+
+        <div class="horizon" aria-hidden="true">
+          <div class="horizon-glow"></div>
+          <div class="horizon-flare"></div>
+          <div class="atmosphere atmosphere-back"></div>
+          <div class="terrain-ridge ridge-back"></div>
+          <div class="atmosphere atmosphere-mid"></div>
+          <div class="terrain-ridge ridge-mid"></div>
+          <div class="atmosphere atmosphere-front"></div>
+          <div class="terrain-ridge ridge-front"></div>
+          <div class="horizon-shimmer"></div>
+        </div>
+
+        <a class="scroll-cue" href="#about" aria-label="Scroll to learn more">
+          <span>Scroll to inspect</span>
+          <i></i>
+        </a>
+      </section>
+
+      <section class="section about-section" id="about">
+        <div class="section-index">01 / About</div>
+        <div class="about-grid">
+          <h2 class="section-title reveal">A clearer view of your<br /><em>external posture.</em></h2>
+          <div class="about-copy reveal">
+            <p class="lead">
+              PatchLens is a defensive, non-invasive security posture scanner built to reveal
+              the signals your public systems already expose.
+            </p>
+            <p>
+              It observes configuration and software fingerprints without exploitation,
+              authentication attempts, or disruptive traffic. The result is a concise view of
+              security hygiene that teams can use to investigate and harden their surface.
+            </p>
+            <div class="principles">
+              <span>Passive by design</span>
+              <span>No intrusive testing</span>
+              <span>Actionable context</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section scanner-section" id="scanner">
+        <div class="section-index">02 / Scanner</div>
+        <div class="scanner-heading reveal">
+          <div>
+            <span class="kicker">Observe the exposed surface</span>
+            <h2 class="section-title">Inspect a target.</h2>
+          </div>
+          <p>Enter a public HTTPS address to prepare a passive posture scan.</p>
+        </div>
+
+        <div class="scanner-panel reveal">
+          <form class="scan-form" id="scan-form" novalidate>
+            <label for="target-url">Target URL</label>
+            <div class="input-row">
+              <div class="url-input-wrap">
+                <span class="input-status" aria-hidden="true"></span>
+                <input
+                  id="target-url"
+                  name="target"
+                  type="url"
+                  inputmode="url"
+                  autocomplete="url"
+                  placeholder="https://example.com"
+                  aria-describedby="scanner-note"
+                  required
+                />
+              </div>
+              <button class="button button-primary scan-button" type="submit">
+                <span>Scan target</span>
+                <i aria-hidden="true"></i>
+              </button>
+            </div>
+            <p class="form-note" id="scanner-note">Only scan systems you own or are authorized to assess.</p>
+          </form>
+
+          <div class="scan-output" id="scan-output" aria-live="polite">
+            <div class="scan-empty" data-state="empty">
+              <div class="radar" aria-hidden="true"><span></span><i></i></div>
+              <div>
+                <strong>Awaiting target</strong>
+                <p>Your posture summary will appear here after a scan begins.</p>
+              </div>
+            </div>
+
+            <div class="scan-loading" data-state="loading" hidden>
+              <div class="scan-progress-line"><span></span></div>
+              <div class="loading-copy">
+                <strong>Preparing passive inspection</strong>
+                <span>Validating target and establishing a secure connection…</span>
+              </div>
+            </div>
+
+            <div class="scan-error" data-state="error" hidden>
+              <span class="result-icon">!</span>
+              <div>
+                <strong>Unable to start scan</strong>
+                <p data-error-message>Please enter a complete HTTPS URL.</p>
+              </div>
+            </div>
+
+            <div class="scan-results" data-state="results" hidden>
+              <div class="results-head">
+                <div>
+                  <span class="status-label"><i></i> <span data-result-status>Scan complete</span></span>
+                  <h3 data-result-host>example.com</h3>
+                </div>
+                <span class="risk-badge" data-result-risk>Review</span>
+              </div>
+              <div class="results-grid">
+                <div><span>TLS</span><strong data-result-tls>—</strong></div>
+                <div><span>Headers</span><strong data-result-headers>—</strong></div>
+                <div><span>Technologies</span><strong data-result-technologies>—</strong></div>
+                <div><span>Vulnerabilities</span><strong data-result-vulnerabilities>—</strong></div>
+              </div>
+              <p class="integration-note" data-result-meta>Scan details will appear here.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section capabilities-section" id="capabilities">
+        <div class="section-index">03 / Capabilities</div>
+        <div class="capabilities-intro reveal">
+          <h2 class="section-title">Four lenses.<br /><em>One surface.</em></h2>
+          <p>Focused checks turn scattered technical signals into a legible security posture.</p>
+        </div>
+
+        <div class="capability-grid">
+          <article class="capability-card reveal">
+            <span class="card-number">01</span>
+            <div class="capability-icon tls-icon" aria-hidden="true"><i></i></div>
+            <h3>TLS Inspection</h3>
+            <p>Review certificate details, protocol support, validity, and transport configuration.</p>
+            <span class="card-meta">Transport layer</span>
+          </article>
+          <article class="capability-card reveal">
+            <span class="card-number">02</span>
+            <div class="capability-icon headers-icon" aria-hidden="true"><i></i><i></i><i></i></div>
+            <h3>Security Headers</h3>
+            <p>Surface missing or weak browser protections across the public response layer.</p>
+            <span class="card-meta">Response posture</span>
+          </article>
+          <article class="capability-card reveal">
+            <span class="card-number">03</span>
+            <div class="capability-icon tech-icon" aria-hidden="true"><i></i></div>
+            <h3>Technology Fingerprinting</h3>
+            <p>Identify exposed frameworks and services from observable implementation signals.</p>
+            <span class="card-meta">Surface inventory</span>
+          </article>
+          <article class="capability-card reveal">
+            <span class="card-number">04</span>
+            <div class="capability-icon osv-icon" aria-hidden="true"><i></i><b></b></div>
+            <h3>OSV Vulnerability Intelligence</h3>
+            <p>Correlate detected technology with open-source vulnerability intelligence.</p>
+            <span class="card-meta">Known exposure</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section process-section" id="process">
+        <div class="section-index">04 / How it works</div>
+        <div class="process-heading reveal">
+          <span class="kicker">A quiet signal path</span>
+          <h2 class="section-title">From target to finding.</h2>
+        </div>
+
+        <ol class="process-flow">
+          <li class="reveal">
+            <span class="flow-number">01</span>
+            <div class="flow-dot"></div>
+            <h3>Target URL</h3>
+            <p>A public endpoint defines the inspection boundary.</p>
+          </li>
+          <li class="reveal">
+            <span class="flow-number">02</span>
+            <div class="flow-dot"></div>
+            <h3>Passive Inspection</h3>
+            <p>Observable metadata is collected without intrusive testing.</p>
+          </li>
+          <li class="reveal">
+            <span class="flow-number">03</span>
+            <div class="flow-dot"></div>
+            <h3>Correlation</h3>
+            <p>Signals are mapped to configuration and vulnerability context.</p>
+          </li>
+          <li class="reveal">
+            <span class="flow-number">04</span>
+            <div class="flow-dot"></div>
+            <h3>Security Findings</h3>
+            <p>Prioritized observations clarify what deserves attention.</p>
+          </li>
+        </ol>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-glow" aria-hidden="true"></div>
+      <div class="footer-top">
+        <a class="brand footer-brand" href="#top">
+          <span class="brand-mark" aria-hidden="true"><span></span></span>
+          <span>PATCHLENS</span>
+        </a>
+        <p>See the surface. Strengthen the posture.</p>
+        <a class="github-link" href="https://github.com" target="_blank" rel="noreferrer">
+          GitHub <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+      <div class="footer-bottom">
+        <span>Defensive security tooling</span>
+        <span>Non-invasive by design</span>
+        <span>© <span data-year></span> PatchLens</span>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
